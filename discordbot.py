@@ -97,11 +97,6 @@ async def on_message(message):
         # チャンネルへメッセージを送信
         await message.channel.send(f"<@&579935775336955905> next boss")
 
-    elif message.content == "3凸終わり":
-        # チャンネルへメッセージを送信
-          channel = client.get_channel('584441360506028213')
-          await message.channel.send(f"本日の{message.author.mention}さんの凸は終了です、お疲れ様でした")
-
 
 
 # ボスに行きたい人を募集するとき
@@ -131,6 +126,11 @@ async def on_message(message):
         q = await message.channel.send("5th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記         
 
+    if message.content == "3凸終わり":
+        # チャンネルへメッセージを送信
+          CHANNEL_ID = 584441360506028213
+          channel = client.get_channel(CHANNEL_ID)
+          await channel.send(f"本日の{message.author.mention}さんの凸は終了です、お疲れ様でした")   
 
 # 60秒に一回ループ
 @tasks.loop(seconds=60)
