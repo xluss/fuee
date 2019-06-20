@@ -73,9 +73,17 @@ async def on_message(message):
 
 
 # クラバトについてのコード
-    if message.content == "凸開始":
+    if message.content == "1凸":
         # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さんの凸です")
+        await message.channel.send(f"{message.author.mention}さんの1凸目です")
+
+    if message.content == "2凸":
+        # チャンネルへメッセージを送信
+        await message.channel.send(f"{message.author.mention}さんの2凸目です")    
+
+    if message.content == "3凸":
+        # チャンネルへメッセージを送信
+        await message.channel.send(f"{message.author.mention}さんの3凸目です")
 
     if message.content == "凸終わり":
         # チャンネルへメッセージを送信
