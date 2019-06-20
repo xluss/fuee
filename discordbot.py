@@ -66,13 +66,6 @@ async def on_message(message):
         embed.add_field(name="[運勢] ", value=random.choice(('大吉', '吉', '凶', '大凶')), inline=False)
         await message.channel.send(embed=embed) 
 
-    elif message.content == "!団長":
-        # Embedを使ったメッセージ送信 と ランダムで要素を選択
-        embed = discord.Embed(title="団長おみくじ", description=f"{message.author.mention}さんに対する団長の言葉！",
-                              color=0x2ECC69)
-        embed.add_field(name="[団長] ", value=random.choice(('JK♪JK♪', 'イリヤの開放準備はできとるけん', 'ふぇさんに金平糖持っていくけん', 'JKと焼き肉','ほなねー')), inline=False)
-        await message.channel.send(embed=embed) 
-
 
     if message.author.bot:  # ボットのメッセージをハネる
         return
@@ -92,7 +85,7 @@ async def on_message(message):
         # チャンネルへメッセージを送信
         await message.channel.send(f"{message.author.mention}さんのLAです")
 
-    if message.content == "!next":
+    if message.content == "!nbs":
         # チャンネルへメッセージを送信
         await message.channel.send(f"<@&579935775336955905> next boss")
 
