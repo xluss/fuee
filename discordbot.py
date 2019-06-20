@@ -46,18 +46,13 @@ async def on_message(message):
     if message.content == '/neko':
         await message.channel.send('にゃーん')
 
-    if message.content == '/hori':
-        await message.channel.send('ぬそぉ...')
-
     if message.content == '/remi':
         await message.channel.send('ちんちんの時間です')
     
     if message.content == '/obuse':
         await message.channel.send('0:40 クスリ')
 
-    if message.content == '/brain':
-        await message.channel.send('下ブレイン上ブレイン') 
-
+        
     elif message.content == "!おみくじ":
         # Embedを使ったメッセージ送信 と ランダムで要素を選択
         embed = discord.Embed(title="おみくじ", description=f"{message.author.mention}さんの今日の運勢は！",
@@ -66,7 +61,33 @@ async def on_message(message):
         embed.add_field(name="[運勢] ", value=random.choice(('大吉', '吉', '凶', '大凶')), inline=False)
         await message.channel.send(embed=embed) 
 
+            elif message.content == "!hori":
+        # Embedを使ったメッセージ送信 と ランダムで要素を選択
+        embed = discord.Embed(title="hori", description=f"ほりくんの迷言集",
+                              color=0x2ECC69)
+        embed.set_thumbnail(url=message.author.avatar_url)
+        embed.add_field(name="[hori] ", value=random.choice(('ぬそぉ', 'ちんちんケルベロス', 'ムラムラ')), inline=False)
+        await message.channel.send(embed=embed) 
 
+        
+    elif message.content == "!brain":
+        # Embedを使ったメッセージ送信 と ランダムで要素を選択
+        embed = discord.Embed(title="brain", description=f"ぶれいんさんの迷言集",
+                              color=0x2ECC69)
+        embed.set_thumbnail(url=message.author.avatar_url)
+        embed.add_field(name="[brain] ", value=random.choice(('上ぶれいん', '下ぶれいん', '神ぶれいん', '凶ぶれいん')), inline=False)
+        await message.channel.send(embed=embed) 
+
+        
+    elif message.content == "!toroy":
+        # Embedを使ったメッセージ送信 と ランダムで要素を選択
+        embed = discord.Embed(title="brain", description=f"とろいさんの迷言集",
+                              color=0x2ECC69)
+        embed.set_thumbnail(url=message.author.avatar_url)
+        embed.add_field(name="[toroy] ", value=random.choice(('呼ばれて飛び出てとろいさん', '寝落ちたわ')), inline=False)
+        await message.channel.send(embed=embed)
+
+        
     if message.author.bot:  # ボットのメッセージをハネる
         return
 
