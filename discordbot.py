@@ -19,7 +19,7 @@ dateTimeList = [
 
 
 # 自分のBotのアクセストークンに置き換えてください
-TOKEN = 'NTg0Mzk2NTUwOTIzNDg1MjAw.XQuG4g.KoOFdHVg7R1gS4RIbEcftJzb9ek'
+TOKEN = 'NTg0Mzk2NTUwOTIzNDg1MjAw.XQuybw.sqdcDjrLsceGTvjJQF1Le36qqPk'
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
@@ -172,4 +172,4 @@ async def loop():
 loop.start()
 
 # Botの起動とDiscordサーバーへの接続
-client.run('NTg0Mzk2NTUwOTIzNDg1MjAw.XQuG4g.KoOFdHVg7R1gS4RIbEcftJzb9ek')
+client.run('NTg0Mzk2NTUwOTIzNDg1MjAw.XQuybw.sqdcDjrLsceGTvjJQF1Le36qqPk')
