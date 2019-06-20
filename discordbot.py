@@ -5,6 +5,7 @@ from discord.ext import tasks
 from datetime import datetime 
 
 dateTimeList = [
+'2019/06/21 05:00',
 '2019/06/22 05:00',
 '2019/06/23 05:00',
 '2019/06/24 05:00',
