@@ -174,4 +174,4 @@ async def loop():
 loop.start()
 
 # Botの起動とDiscordサーバーへの接続
-client.run('NTg0Mzk2NTUwOTIzNDg1MjAw.XQuybw.sqdcDjrLsceGTvjJQF1Le36qqPk')
+client.run('TOKEN')
