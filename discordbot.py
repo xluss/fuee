@@ -79,78 +79,81 @@ async def on_message(message):
 
 # クラバトについてのコード
     CHANNEL_ID = 584441360506028213
+    CHANNEL_ID1 = 584440901175214115
+
     if message.content == "1凸":
         
-        await message.channel.send(f"{message.author.mention}さんの1凸目です")
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの1凸目です") 
 
     if message.content == "2凸":
         
-        await message.channel.send(f"{message.author.mention}さんの2凸目です")    
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの2凸目です")    
 
     if message.content == "3凸":
         
-        await message.channel.send(f"{message.author.mention}さんの3凸目です")
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの3凸目です")
 
     if message.content == "1凸終了":
         
-    channel = client.get_channel(584440901175214115)
-    await message.channel.send(f"{message.author.mention}さんの1凸目終了です")
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの1凸目終了です")
         
     if message.content == "2凸終了":
           
-    channel = client.get_channel(584440901175214115)
-    await channel.send(f"本日の{message.author.mention}さんの凸は終了です、お疲れ様でした")   
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの2凸目終了です")   
 
     if message.content == "3凸終了":
-        
 
         channel = client.get_channel(CHANNEL_ID)
         await channel.send(f"本日の{message.author.mention}さんの凸は終了です、お疲れ様でした")   
     
     if message.content == "/LA":
         
-        channel = client.get_channel(584440901175214115)
+        channel = client.get_channel(CHANNEL_ID1)
         await message.channel.send(f"{message.author.mention}さんのLAです")
 
     if message.content == "!nbs":
         
-        channel = client.get_channel(584440901175214115)
-        await message.channel.send(f"<@&579935775336955905> next boss")
+        channel = client.get_channel(CHANNEL_ID1)
+        await message.send(f"<@&579935775336955905> next boss")
 
 
 
 # ボスに行きたい人を募集するとき
-
-    if message.content == "!1st":
+    CHANNEL_ID2 = 584441021367058435
+    if    message.content == "!1st":
         # リアクションアイコンを付けたい
-        q = await message.channel.send("1st bossに行きたい人は意志表明してください")
+        channel = client.get_channel(CHANNEL_ID2)
+        q = await channel.send("1st bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記
 
     if    message.content == "!2nd":
         # リアクションアイコンを付けたい
-        q = await message.channel.send("2nd bossに行きたい人は意志表明してください")
+        channel = client.get_channel(CHANNEL_ID2)
+        q = await channel.send("2nd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
     if    message.content == "!3rd":
         # リアクションアイコンを付けたい
-        q = await message.channel.send("3rd bossに行きたい人は意志表明してください")
+        channel = client.get_channel(CHANNEL_ID2)
+        q = await channel.send("3rd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
     if    message.content == "!4th":
         # リアクションアイコンを付けたい
-        q = await message.channel.send("4th bossに行きたい人は意志表明してください")
+        channel = client.get_channel(CHANNEL_ID2)
+        q = await channel.send("4th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記      
 
     if    message.content == "!5th":
         # リアクションアイコンを付けたい
-        q = await message.channel.send("5th bossに行きたい人は意志表明してください")
+        channel = client.get_channel(CHANNEL_ID2)
+        q = await channel.send("5th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記         
-
-    if message.content == "3凸終了":
-        # チャンネルへメッセージを送信
-          CHANNEL_ID = 584441360506028213
-          channel = client.get_channel(CHANNEL_ID)
-          await channel.send(f"本日の{message.author.mention}さんの凸は終了です、お疲れ様でした")   
 
 # 60秒に一回ループ
 @tasks.loop(seconds=60)
