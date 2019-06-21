@@ -4,20 +4,6 @@ import random  # おみくじで使用
 from discord.ext import tasks
 from datetime import datetime 
 
-dateTimeList = [
-'2019/06/21 05:00',
-'2019/06/22 05:00',
-'2019/06/23 05:00',
-'2019/06/24 05:00',
-'2019/06/25 05:00',
-'2019/06/26 05:00',
-'2019/06/27 05:00',
-'2019/06/28 05:00',
-'2019/06/29 05:00',
-]
-
-
-
 
 # 自分のBotのアクセストークンに置き換えてください
 TOKEN = 'NTg0Mzk2NTUwOTIzNDg1MjAw.XQuybw.sqdcDjrLsceGTvjJQF1Le36qqPk'
@@ -46,9 +32,6 @@ async def on_message(message):
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
         await message.channel.send('にゃーん')
-
-    if message.content == '/remi':
-        await message.channel.send('ちんちんの時間です')
     
     if message.content == '/obuse':
         await message.channel.send('0:40 クスリ')
