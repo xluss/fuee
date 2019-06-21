@@ -118,12 +118,12 @@ async def on_message(message):
     if message.content == "/nbs":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await message.send(f"<@&584396550923485200> next boss")
+        await channel.send(f"<@&579935775336955905> next boss")
         
     if message.content == "/助けて":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await message.send(f"<@&584396550923485200> 助けてマリオ！")    
+        await chaanel.send(f"<@&579935775336955905> 助けてマリオ！")    
         
 
 
