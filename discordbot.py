@@ -80,7 +80,6 @@ async def on_message(message):
 # クラバトについてのコード
     CHANNEL_ID = 584441360506028213
     CHANNEL_ID1 = 584440901175214115
-
     if message.content == "1凸":
         
         channel = client.get_channel(CHANNEL_ID1)
@@ -174,4 +173,4 @@ async def loop():
 loop.start()
 
 # Botの起動とDiscordサーバーへの接続
-client.run('TOKEN')
+client.run('NTg0Mzk2NTUwOTIzNDg1MjAw.XQuybw.sqdcDjrLsceGTvjJQF1Le36qqPk')
