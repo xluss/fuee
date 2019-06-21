@@ -115,7 +115,7 @@ async def on_message(message):
         channel = client.get_channel(CHANNEL_ID1)
         await message.channel.send(f"{message.author.mention}さんのLAです")
 
-    if message.content == "!nbs":
+    if message.content == "/nbs":
         
         channel = client.get_channel(CHANNEL_ID1)
         await message.send(f"<@&579935775336955905> next boss")
@@ -124,31 +124,31 @@ async def on_message(message):
 
 # ボスに行きたい人を募集するとき
     CHANNEL_ID2 = 584441021367058435
-    if    message.content == "!1st":
+    if    message.content == "/1st":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
         q = await channel.send("1st bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記
 
-    if    message.content == "!2nd":
+    if    message.content == "/2nd":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
         q = await channel.send("2nd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
-    if    message.content == "!3rd":
+    if    message.content == "/3rd":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
         q = await channel.send("3rd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
-    if    message.content == "!4th":
+    if    message.content == "/4th":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
         q = await channel.send("4th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記      
 
-    if    message.content == "!5th":
+    if    message.content == "/5th":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
         q = await channel.send("5th bossに行きたい人は意志表明してください")
