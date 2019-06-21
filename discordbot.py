@@ -7,9 +7,9 @@ from datetime import datetime
 
 # 自分のBotのアクセストークンに置き換えてください
 TOKEN = 'NTg0Mzk2NTUwOTIzNDg1MjAw.XQuybw.sqdcDjrLsceGTvjJQF1Le36qqPk'
-
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
+
 
 # 起動時に動作する処理
 @client.event
