@@ -119,6 +119,12 @@ async def on_message(message):
         
         channel = client.get_channel(CHANNEL_ID1)
         await message.send(f"<@&579935775336955905> next boss")
+        
+    if message.content == "/助けて":
+        
+        channel = client.get_channel(CHANNEL_ID1)
+        await message.send(f"<@&579935775336955905> 助けてマリオ！")    
+        
 
 
 
