@@ -124,7 +124,7 @@ async def on_message(message):
 
     if message.content == "持ち越し":
 
-        channel = client.get_channel(CHANNEL_ID)
+        channel = client.get_channel(CHANNEL_ID1)
         await channel.send(f"{message.author.mention}さんの持ち越しです")   
 
     if message.content == "1凸LA":
