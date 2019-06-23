@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 # 自分のBotのアクセストークンに置き換えてください
-TOKEN = 'NTg0Mzk2NTUwOTIzNDg1MjAw.XQ3icQ.JOM2n9vwrBSu1SiuBDfcMiGdE8w'
+TOKEN = 'NTUyMTM0NjQ4NTgzNjg0MTM4.XQ0OgA.tnoMy9iEHnXpRdVnNPc1zfRZtPg'
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -36,52 +36,40 @@ async def on_message(message):
     if message.content == '/obuse':
         await message.channel.send('0:40 クスリ')
 
-        
     elif message.content == "!おみくじ":
         # Embedを使ったメッセージ送信 と ランダムで要素を選択
         embed = discord.Embed(title="おみくじ", description=f"{message.author.mention}さんの今日の運勢は！",
                               color=0x2ECC69)
         embed.set_thumbnail(url=message.author.avatar_url)
         embed.add_field(name="[運勢] ", value=random.choice(('大吉', '中吉','吉', '小吉', '凶', '大凶')), inline=False)
-        await message.channel.send(embed=embed) 
-
-    elif message.content == "!hori":
-        # Embedを使ったメッセージ送信 と ランダムで要素を選択
-        embed = discord.Embed(title="hori", description=f"ほりくんの迷言集",
-                              color=0x2ECC69)
-        embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[hori] ", value=random.choice(('ぬそぉ...', 'ちんちんケルベロス', 'ムラムラ')), inline=False)
-        await message.channel.send(embed=embed) 
-
+        await message.channel.send(embed=embed)     
         
-    elif message.content == "!brain":
+    elif message.content == "団長":
         # Embedを使ったメッセージ送信 と ランダムで要素を選択
-        embed = discord.Embed(title="brain", description=f"あなたは何ぶれ？",
+        embed = discord.Embed(title="brain", description=f"団長の迷言集",
                               color=0x2ECC69)
         embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[brain] ", value=random.choice(('上ぶれいん', '下ぶれいん', '神ぶれいん', '凶ぶれいん')), inline=False)
-        await message.channel.send(embed=embed) 
-
-        
-    elif message.content == "!toroy":
-        # Embedを使ったメッセージ送信 と ランダムで要素を選択
-        embed = discord.Embed(title="brain", description=f"とろいさんの迷言集",
-                              color=0x2ECC69)
-        embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[toroy] ", value=random.choice(('呼ばれて飛び出てとろいさん', '寝落ちたわ')), inline=False)
+        embed.add_field(name="[団長] ", value=random.choice(('しゅんすけと寝落ちもしもしすゆけん','ゆうやぁ！','(´ิ ❥ ´ิ♡)ぶっちゅ。','イリヤの開放準備はできとるけん！', 'JK♪JK♪,','セクハラしてなんぼやろ！','監禁♪監禁♪')), inline=False)
         await message.channel.send(embed=embed)
 
-        
+    elif message.content == "ぶちゅんぱ":
+        # Embedを使ったメッセージ送信 と ランダムで要素を選択
+        embed = discord.Embed(title="ぶちゅんぱ", description=f"ぶちゅんぱチャレンジ",
+                              color=0x2ECC69)
+        embed.set_thumbnail(url=message.author.avatar_url)
+        embed.add_field(name="[ぶちゅんぱ] ", value=random.choice((' <@!429931195686584320> (´ิ ❥ ´ิ♡)ぶっちゅ。',' <@!524861024218775582> (´ิ ❥ ´ิ♡)ぶっちゅ。',' <@!518518488550342677> (´ิ ❥ ´ิ♡)ぶっちゅ。')), inline=False)
+        await message.channel.send(embed=embed)
+
+
     if message.author.bot:  # ボットのメッセージをハネる
         return
 
 
 
 # クラバトについてのコード
-    CHANNEL_ID = 584441360506028213
-    CHANNEL_ID1 = 584440901175214115
-
-
+    CHANNEL_ID = 591645505256292420
+    CHANNEL_ID1 = 516850566060572672
+    CHANNEL_ID2 = 592255251814285334
     if message.content == "同時a":
         
         channel = client.get_channel(CHANNEL_ID1)
@@ -124,7 +112,7 @@ async def on_message(message):
 
     if message.content == "持ち越し":
 
-        channel = client.get_channel(CHANNEL_ID1)
+        channel = client.get_channel(CHANNEL_ID)
         await channel.send(f"{message.author.mention}さんの持ち越しです")   
 
     if message.content == "1凸LA":
@@ -140,97 +128,75 @@ async def on_message(message):
     if message.content == "3凸LA":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"{message.author.mention}さんの3凸目のLAです")   
-
+        await channel.send(f"{message.author.mention}さんの3凸目のLAです")  
+        
     if message.content == "/1st":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"<@&579935775336955905> ゴブリングレート")
+        await channel.send(f"<@&540501141398749220> ゴブリングレート")
         
     if message.content == "/2nd":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"<@&579935775336955905> ライライ")    
+        await channel.send(f"<@&540501141398749220> ライライ")    
 
     if message.content == "/3rd":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"<@&579935775336955905> シードレイク") 
+        await channel.send(f"<@&540501141398749220> シードレイク") 
         
     if message.content == "/4th":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"<@&579935775336955905> ネプテリオン") 
+        await channel.send(f"<@&540501141398749220> ネプテリオン") 
         
     if message.content == "/5th":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"<@&579935775336955905> カルキノス") 
+        await channel.send(f"<@&540501141398749220> カルキノス") 
         
     if message.content == "/助けて":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"<@&579935775336955905> 助けてマリオ！")    
+        await channel.send(f"<@&540501141398749220> 助けてマリオ！")    
         
 
 
-
 # ボスに行きたい人を募集するとき
-    CHANNEL_ID2 = 584441021367058435
+
+
     if    message.content == "!1st":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("<@&579935775336955905> 1st bossに行きたい人は意志表明してください")
+        q = await message.channel.send("<@&540501141398749220> 1st bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記
 
     if    message.content == "!2nd":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("<@&579935775336955905> 2nd bossに行きたい人は意志表明してください")
+        q = await message.channel.send("<@&540501141398749220> 2nd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
     if    message.content == "!3rd":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("<@&579935775336955905> 3rd bossに行きたい人は意志表明してください")
+        q = await message.channel.send("<@&540501141398749220> 3rd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
     if    message.content == "!4th":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("<@&579935775336955905> 4th bossに行きたい人は意志表明してください")
+        q = await message.channel.send("<@&540501141398749220> 4th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記      
 
     if    message.content == "!5th":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("<@&579935775336955905> 5th bossに行きたい人は意志表明してください")
+        q = await message.channel.send("<@&540501141398749220> 5th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記         
 
-# 60秒に一回ループ
-@tasks.loop(seconds=60)
-async def loop():
-    # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '21:00':
-        channel = client.get_channel(560495611280097295)
-        await channel.send('プリコネの更新時間だよ～')  
 
-    # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '20:00':
-        channel = client.get_channel(560495611280097295)
-        await channel.send('プリコネの更新1時間前だよ～')  
-        
-        # 現在の時刻
-    now = datetime.now().strftime('%H:%M')
-    if now == '21:00':
-        channel = client.get_channel(584441360506028213)
-        await channel.send('今日のクラバトの集計です')  
-    
 
-#ループ処理実行
-loop.start()
 
 # Botの起動とDiscordサーバーへの接続
-client.run('NTg0Mzk2NTUwOTIzNDg1MjAw.XQ3icQ.JOM2n9vwrBSu1SiuBDfcMiGdE8w')
+client.run('NTUyMTM0NjQ4NTgzNjg0MTM4.XQ0OgA.tnoMy9iEHnXpRdVnNPc1zfRZtPg')
