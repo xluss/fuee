@@ -80,6 +80,18 @@ async def on_message(message):
 # クラバトについてのコード
     CHANNEL_ID = 584441360506028213
     CHANNEL_ID1 = 584440901175214115
+
+
+    if message.content == "同時a":
+        
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention} もう一人を待ってください") 
+
+    if message.content == "同時b":
+        
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention} 同時凸を開始します") 
+
     if message.content == "1凸":
         
         channel = client.get_channel(CHANNEL_ID1)
@@ -109,11 +121,26 @@ async def on_message(message):
 
         channel = client.get_channel(CHANNEL_ID)
         await channel.send(f"本日の{message.author.mention}さんの凸は終了です、お疲れ様でした")   
-    
-    if message.content == "/LA":
+
+    if message.content == "持ち越し":
+
+        channel = client.get_channel(CHANNEL_ID)
+        await channel.send(f"{message.author.mention}さんの持ち越しです")   
+
+    if message.content == "1凸LA":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await channel.send(f"{message.author.mention}さんのLAです")
+        await channel.send(f"{message.author.mention}さんの1凸目のLAです")
+
+    if message.content == "2凸LA":
+        
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの2凸目のLAです")        
+
+    if message.content == "3凸LA":
+        
+        channel = client.get_channel(CHANNEL_ID1)
+        await channel.send(f"{message.author.mention}さんの3凸目のLAです")   
 
     if message.content == "/1st":
         
