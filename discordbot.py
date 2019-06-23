@@ -42,7 +42,7 @@ async def on_message(message):
         embed = discord.Embed(title="おみくじ", description=f"{message.author.mention}さんの今日の運勢は！",
                               color=0x2ECC69)
         embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[運勢] ", value=random.choice(('大吉', '吉', '凶', '大凶')), inline=False)
+        embed.add_field(name="[運勢] ", value=random.choice(('大吉', '中吉','吉', '小吉', '凶', '大凶')), inline=False)
         await message.channel.send(embed=embed) 
 
     elif message.content == "!hori":
@@ -50,13 +50,13 @@ async def on_message(message):
         embed = discord.Embed(title="hori", description=f"ほりくんの迷言集",
                               color=0x2ECC69)
         embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[hori] ", value=random.choice(('ぬそぉ', 'ちんちんケルベロス', 'ムラムラ')), inline=False)
+        embed.add_field(name="[hori] ", value=random.choice(('ぬそぉ...', 'ちんちんケルベロス', 'ムラムラ')), inline=False)
         await message.channel.send(embed=embed) 
 
         
     elif message.content == "!brain":
         # Embedを使ったメッセージ送信 と ランダムで要素を選択
-        embed = discord.Embed(title="brain", description=f"ぶれいんさんの迷言集",
+        embed = discord.Embed(title="brain", description=f"あなたは何ぶれ？",
                               color=0x2ECC69)
         embed.set_thumbnail(url=message.author.avatar_url)
         embed.add_field(name="[brain] ", value=random.choice(('上ぶれいん', '下ぶれいん', '神ぶれいん', '凶ぶれいん')), inline=False)
@@ -113,7 +113,7 @@ async def on_message(message):
     if message.content == "/LA":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await message.channel.send(f"{message.author.mention}さんのLAです")
+        await channel.send(f"{message.author.mention}さんのLAです")
 
     if message.content == "/1st":
         
@@ -153,31 +153,31 @@ async def on_message(message):
     if    message.content == "!1st":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("1st bossに行きたい人は意志表明してください")
+        q = await channel.send("<@&579935775336955905> 1st bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記
 
     if    message.content == "!2nd":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("2nd bossに行きたい人は意志表明してください")
+        q = await channel.send("<@&579935775336955905> 2nd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
     if    message.content == "!3rd":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("3rd bossに行きたい人は意志表明してください")
+        q = await channel.send("<@&579935775336955905> 3rd bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記  
 
     if    message.content == "!4th":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("4th bossに行きたい人は意志表明してください")
+        q = await channel.send("<@&579935775336955905> 4th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記      
 
     if    message.content == "!5th":
         # リアクションアイコンを付けたい
         channel = client.get_channel(CHANNEL_ID2)
-        q = await channel.send("5th bossに行きたい人は意志表明してください")
+        q = await channel.send("<@&579935775336955905> 5th bossに行きたい人は意志表明してください")
         [await q.add_reaction(i) for i in ('⭕')]  # for文の内包表記         
 
 # 60秒に一回ループ
@@ -185,15 +185,22 @@ async def on_message(message):
 async def loop():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '05:00':
+    if now == '21:00':
         channel = client.get_channel(560495611280097295)
         await channel.send('プリコネの更新時間だよ～')  
 
     # 現在の時刻
     now = datetime.now().strftime('%H:%M')
-    if now == '04:00':
+    if now == '20:00':
         channel = client.get_channel(560495611280097295)
         await channel.send('プリコネの更新1時間前だよ～')  
+        
+        # 現在の時刻
+    now = datetime.now().strftime('%H:%M')
+    if now == '21:00':
+        channel = client.get_channel(584441360506028213)
+        await channel.send('今日のクラバトの集計です')  
+    
 
 #ループ処理実行
 loop.start()
