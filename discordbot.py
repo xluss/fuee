@@ -83,7 +83,7 @@ async def on_message(message):
     if message.content == "1凸":
         
         channel = client.get_channel(CHANNEL_ID1)
-        await message.channel.send(f"{message.author.mention}さんの1凸目です") 
+        await channel.send(f"{message.author.mention}さんの1凸目です") 
 
     if message.content == "2凸":
         
